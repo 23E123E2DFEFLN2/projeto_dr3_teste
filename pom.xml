@@ -78,6 +78,12 @@
         <version>1.18.22</version> <!-- Adicionado AT -->
         <scope>provided</scope>
       </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version> <!-- ou a versão mais recente -->
+        <scope>test</scope>
+      </dependency>
 
       <dependency>
         <groupId>org.slf4j</groupId>
