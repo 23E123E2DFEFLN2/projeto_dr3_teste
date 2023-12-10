@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOOutput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,9 +190,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
         <item itemvalue="JUnit.IntegrationTest" />
-        <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
         <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
       </list>
@@ -212,7 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="27541000" />
+      <workItem from="1702183189475" duration="28162000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -326,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702241590781</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702242173147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702242173147</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,5 +368,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/projeto_dr3$ServiceTest__1_.ic" NAME="ServiceTest (1) Coverage Results" MODIFIED="1702242372505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.edu.infnet.*</FILTER>
+    </SUITE>
   </component>
 </project>

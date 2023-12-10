@@ -1,6 +1,7 @@
 package br.edu.infnet.controller;
 
 import br.edu.infnet.config.DatabaseConfig;
+import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.service.UsuarioService;
 import br.edu.infnet.util.JwtUtil;
@@ -77,13 +78,13 @@ public class UsuarioController {
 
     private void inserirUsuario(Request request, Response response) throws Exception {
         UsuarioDTOOutput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOOutput.class);
-        usuarioService.inserir(usuarioDTOInput);
+        usuarioService.inserir(new UsuarioDTOInput());
         response.status(201); // Created
     }
 
     private void atualizarUsuario(Request request, Response response) throws Exception {
         UsuarioDTOOutput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOOutput.class);
-        usuarioService.alterar(usuarioDTOInput);
+        usuarioService.alterar(new UsuarioDTOInput());
         response.status(200); // OK
     }
     private void verificarToken(Request request, Response response) {

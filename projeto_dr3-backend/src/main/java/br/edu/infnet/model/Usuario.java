@@ -1,10 +1,11 @@
 package br.edu.infnet.model;
 
-import br.edu.infnet.dto.UsuarioDTOOutput;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class Usuario extends UsuarioDTOOutput {
+@EqualsAndHashCode(callSuper = false)
+public class Usuario {
     private int id;
     private String nome;
     private String senha;
