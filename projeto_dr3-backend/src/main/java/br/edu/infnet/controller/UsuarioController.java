@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import spark.Request;
 import spark.Response;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -116,25 +118,27 @@ public class UsuarioController {
         // Consulta no banco de dados para autenticação
         try (Connection connection = DatabaseConfig.conectar();
              PreparedStatement preparedStatement = connection.prepareStatement(
-                     "SELECT * FROM usuarios WHERE nome = ? AND senha = ?")) {
+                     "SELECT * FROM usuarios WHERE nome = ?")) {
 
             preparedStatement.setString(1, username);
-            preparedStatement.setString(2, senha);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                String token = JwtUtil.criarToken(username);
-                return token;
-            } else {
-                response.status(401); // Unauthorized
-                return "Credenciais inválidas";
+                String senhaArmazenada = resultSet.getString("senha");
+                // Comparação de senhas usando BCrypt
+                if (BCrypt.checkpw(senha, senhaArmazenada)) {
+                    String token = JwtUtil.criarToken(username);
+                    return token;
+                }
             }
+
+            response.status(401); // Unauthorized
+            return "Credenciais inválidas";
 
         } catch (SQLException e) {
             e.printStackTrace();
             response.status(500); // Internal Server Error
             return "Erro ao autenticar";
         }
-
     }
 }

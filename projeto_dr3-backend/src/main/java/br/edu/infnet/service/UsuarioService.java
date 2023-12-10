@@ -1,11 +1,11 @@
 package br.edu.infnet.service;
 
+import br.edu.infnet.config.DatabaseConfig;
 import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.model.Usuario;
 import org.modelmapper.ModelMapper;
-import br.edu.infnet.config.DatabaseConfig;
-
+import org.mindrot.jbcrypt.BCrypt;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,9 @@ public class UsuarioService {
                      "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
 
             preparedStatement.setString(1, usuarioDTOInput.getNome());
-            preparedStatement.setString(2, usuarioDTOInput.getSenha());
+            // Hash da senha antes de armazenar
+            String senhaHash = BCrypt.hashpw(usuarioDTOInput.getSenha(), BCrypt.gensalt());
+            preparedStatement.setString(2, senhaHash);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -67,7 +69,33 @@ public class UsuarioService {
         return null;
     }
 
+    public void atualizar(UsuarioDTOInput usuarioDTOInput) {
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "UPDATE usuarios SET nome = ?, senha = ? WHERE id = ?")) {
+
+            preparedStatement.setString(1, usuarioDTOInput.getNome());
+            // Hash da nova senha antes de atualizar
+            String senhaHash = BCrypt.hashpw(usuarioDTOInput.getSenha(), BCrypt.gensalt());
+            preparedStatement.setString(2, senhaHash);
+            preparedStatement.setInt(3, usuarioDTOInput.getId());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void excluir(int id) {
-        listaUsuarios.removeIf(usuario -> usuario.getId() == id);
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "DELETE FROM usuarios WHERE id = ?")) {
+
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

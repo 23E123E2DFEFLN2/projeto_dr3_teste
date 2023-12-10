@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="inicial">
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/security/WebSecurityConfigurerAdapter.java" afterDir="false" />
+    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="bd? !?">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
@@ -74,10 +73,15 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ]
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
       <extension name="coverage">
@@ -102,11 +106,6 @@
       <item itemvalue="Application.MainApp" />
       <item itemvalue="Spring Boot.App" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MainApp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -124,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="9151000" />
+      <workItem from="1702183189475" duration="11833000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -142,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702218696545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bd? !?">
+      <option name="closed" value="true" />
+      <created>1702221622197</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702221622197</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicial" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicial" />
+    <MESSAGE value="bd? !?" />
+    <option name="LAST_COMMIT_MESSAGE" value="bd? !?" />
   </component>
 </project>
