@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reactor",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -89,7 +88,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -103,21 +102,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projeto_dr3-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.edu.infnet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.edu.infnet" />
-      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ExternalApiIntegrationTest" />
-      <option name="METHOD_NAME" value="testInserirUsuarioViaApiExterna" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="H2 Fragment (DatabaseConfig.java:2,182).sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="/H2 Fragment (DatabaseConfig.java:2,182).sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
     </configuration>
     <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
@@ -191,7 +179,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
+      <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
       <item itemvalue="JUnit.IntegrationTest" />
       <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
       <item itemvalue="JUnit.ServiceTest (1)" />
@@ -200,11 +188,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
         <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
         <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
-        <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +212,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="26874000" />
+      <workItem from="1702183189475" duration="27541000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -330,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702240671423</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702241590781</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702241590781</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

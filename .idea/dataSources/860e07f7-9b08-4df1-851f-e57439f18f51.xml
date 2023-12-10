@@ -171,10 +171,19 @@
     </schema>
     <schema id="163" parent="2" name="PUBLIC">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2023-12-10.17:45:40</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2023-12-10.20:59:28</LastIntrospectionLocalTimestamp>
     </schema>
     <user id="164" parent="2" name="SA">
       <Admin>1</Admin>
     </user>
+    <table id="165" parent="163" name="USUARIOS"/>
+    <column id="166" parent="165" name="NOME">
+      <DasType>INTEGER|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="167" parent="165" name="SENHA">
+      <DasType>INTEGER|0s</DasType>
+      <Position>2</Position>
+    </column>
   </database-model>
 </dataSource>
