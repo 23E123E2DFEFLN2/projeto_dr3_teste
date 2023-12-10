@@ -1,5 +1,5 @@
 package br.edu.infnet;
-
+//11 a 19
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
@@ -18,13 +18,12 @@ public class GreetingHandler {
 
     public RouterFunction<ServerResponse> routes() {
         return RouterFunctions.route()
-            .GET("/greeting", this::greeting)
-            .build();
+                .GET("/greeting", this::greeting)
+                .build();
     }
 
     public Mono<ServerResponse> greeting(ServerRequest req) {
         final String name = req.queryParam("name").orElse("World");
-        return ServerResponse.ok().syncBody(new Greeting(counter.incrementAndGet(),
-            String.format(template, name)));
+        return ServerResponse.ok().body(new Greeting(counter.incrementAndGet(), String.format(template, name)));
     }
 }
