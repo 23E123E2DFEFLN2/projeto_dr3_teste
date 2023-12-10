@@ -13,6 +13,7 @@ public class MainApp {
         UsuarioController usuarioController = new UsuarioController();
         usuarioController.respostasRequisicoes();
         awaitInitialization();
+
     }
 }
 

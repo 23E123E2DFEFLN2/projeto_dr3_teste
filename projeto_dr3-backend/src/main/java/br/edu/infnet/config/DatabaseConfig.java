@@ -1,5 +1,7 @@
 package br.edu.infnet.config;
 
+import org.h2.tools.Server;
+
 import java.sql.*;
 
 public class DatabaseConfig {
@@ -18,12 +20,13 @@ public class DatabaseConfig {
                     "nome VARCHAR(255) NOT NULL," +
                     "senha VARCHAR(255) NOT NULL)");
 
-            // Inserção de alguns dados de exemplo
+
             try (PreparedStatement preparedStatement = connection.prepareStatement(
                     "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
                 preparedStatement.setString(1, "usuario");
                 preparedStatement.setString(2, "senha123");
                 preparedStatement.executeUpdate();
+                Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();
             }
 
         } catch (SQLException e) {
