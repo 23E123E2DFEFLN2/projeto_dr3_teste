@@ -4,29 +4,29 @@ import br.edu.infnet.config.DatabaseConfig;
 import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.model.Usuario;
-import org.modelmapper.ModelMapper;
 import org.mindrot.jbcrypt.BCrypt;
+import org.modelmapper.ModelMapper;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioService {
 
-    private List<Usuario> listaUsuarios = new ArrayList<>();
     private ModelMapper modelMapper = new ModelMapper();
 
-    public List<UsuarioDTOOutput> listar() {
+    public List<UsuarioDTOOutput> listarUsuarios() {
         List<UsuarioDTOOutput> usuariosDTO = new ArrayList<>();
         try (Connection connection = DatabaseConfig.conectar();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM usuarios")) {
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM USUARIOS")) {
 
             while (resultSet.next()) {
-                Usuario usuario = new Usuario();
-                usuario.setId(resultSet.getInt("id"));
-                usuario.setNome(resultSet.getString("nome"));
+                UsuarioDTOOutput usuarioDTO = new UsuarioDTOOutput();
+                usuarioDTO.setId(resultSet.getInt("id"));
+                usuarioDTO.setNome(resultSet.getString("nome"));
 
-                usuariosDTO.add(modelMapper.map(usuario, UsuarioDTOOutput.class));
+                usuariosDTO.add(usuarioDTO);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -52,16 +52,18 @@ public class UsuarioService {
 
     public void alterar(UsuarioDTOInput usuarioDTOInput) {
         Usuario usuario = modelMapper.map(usuarioDTOInput, Usuario.class);
-        for (int i = 0; i < listaUsuarios.size(); i++) {
-            if (listaUsuarios.get(i).getId() == usuario.getId()) {
-                listaUsuarios.set(i, usuario);
+        List<UsuarioDTOOutput> usuarios = listarUsuarios();
+        for (int i = 0; i < usuarios.size(); i++) {
+            if (usuarios.get(i).getId() == usuario.getId()) {
+                atualizar(usuarioDTOInput);
                 break;
             }
         }
     }
 
     public UsuarioDTOOutput buscar(int id) {
-        for (Usuario usuario : listaUsuarios) {
+        List<UsuarioDTOOutput> usuarios = listarUsuarios();
+        for (UsuarioDTOOutput usuario : usuarios) {
             if (usuario.getId() == id) {
                 return modelMapper.map(usuario, UsuarioDTOOutput.class);
             }
@@ -97,5 +99,10 @@ public class UsuarioService {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean usuariosEstaoVazios() {
+        List<UsuarioDTOOutput> usuarios = listarUsuarios();
+        return usuarios.isEmpty();
     }
 }

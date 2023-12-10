@@ -60,7 +60,7 @@ public class UsuarioController {
 
     private List<UsuarioDTOOutput> listarUsuarios(Request request, Response response) {
         response.type("application/json");
-        return usuarioService.listar();
+        return usuarioService.listarUsuarios();
     }
 
     private UsuarioDTOOutput buscarUsuario(Request request, Response response) {

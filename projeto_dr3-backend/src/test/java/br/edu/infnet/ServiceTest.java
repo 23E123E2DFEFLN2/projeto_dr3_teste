@@ -18,6 +18,6 @@ public class ServiceTest {
         usuarioService.inserir(usuarioDTOInput);
 
         // Verifica se o tamanho da lista é igual a 1 após a inserção
-        assertEquals(1, usuarioService.listar().size());
+        assertEquals(1, usuarioService.listarUsuarios().size());
     }
 }

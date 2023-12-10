@@ -27,7 +27,7 @@ public class DatabaseConfig {
                     "senha VARCHAR(255) NOT NULL)");
 
             // Inserir usuários da API randomuser.me
-            inserirUsuariosDaAPI(connection, 10); // Inserir 5 usuários, por exemplo
+            inserirUsuariosDaAPI(connection); // Inserir 5 usuários, por exemplo
 
             // Iniciar o console do H2
             Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();
@@ -37,8 +37,8 @@ public class DatabaseConfig {
         }
     }
 
-    private static void inserirUsuariosDaAPI(Connection connection, int quantidade) throws IOException, SQLException {
-        String apiUrl = "https://randomuser.me/api/?results=" + quantidade;
+    private static void inserirUsuariosDaAPI(Connection connection) throws IOException, SQLException {
+        String apiUrl = "https://randomuser.me/api/?results=" + 10;
         URL url = new URL(apiUrl);
         HttpURLConnection connectionAPI = (HttpURLConnection) url.openConnection();
 

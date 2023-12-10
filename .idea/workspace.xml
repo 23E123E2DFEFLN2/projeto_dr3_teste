@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,6 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Shell Script.mvnw.executor": "Run",
     "Spring Boot.App.executor": "Run",
     "kotlin-language-version-configured": "true",
@@ -161,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="20186000" />
+      <workItem from="1702183189475" duration="23067000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -235,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702233027831</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702234262717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702234262717</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
