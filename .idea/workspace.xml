@@ -4,44 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/Greeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/GreetingHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/WelcomeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application-default.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ExternalApiIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/GreetingControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/IntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/resources/junit-platform.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/elm.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/src/Main.elm" afterDir="false" />
+    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="inicial">
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/security/WebSecurityConfigurerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +76,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -155,8 +124,25 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="6191000" />
+      <workItem from="1702183189475" duration="9151000" />
     </task>
+    <task id="LOCAL-00001" summary="inicial">
+      <option name="closed" value="true" />
+      <created>1702218585808</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702218585810</updated>
+    </task>
+    <task id="LOCAL-00002" summary="inicial">
+      <option name="closed" value="true" />
+      <created>1702218696545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702218696545</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,5 +158,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="inicial" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicial" />
   </component>
 </project>

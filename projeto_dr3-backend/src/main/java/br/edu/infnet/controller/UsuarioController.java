@@ -1,5 +1,6 @@
 package br.edu.infnet.controller;
 
+import br.edu.infnet.config.DatabaseConfig;
 import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.service.UsuarioService;
 import br.edu.infnet.util.JwtUtil;
@@ -7,6 +8,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import spark.Request;
 import spark.Response;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import static spark.Spark.*;
@@ -79,18 +84,57 @@ public class UsuarioController {
         usuarioService.alterar(usuarioDTOInput);
         response.status(200); // OK
     }
+    private void verificarToken(Request request, Response response) {
+        String token = request.headers("Authorization");
 
+        if (token == null || !JwtUtil.validarToken(token)) {
+            halt(401, "Token inválido ou ausente");
+        }
+
+        // Verificar se o usuário associado ao token existe no banco de dados
+        String username = JwtUtil.extrairUsername(token);
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "SELECT * FROM usuarios WHERE nome = ?")) {
+
+            preparedStatement.setString(1, username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (!resultSet.next()) {
+                halt(401, "Usuário não encontrado");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            halt(500, "Erro ao verificar token");
+        }
+    }
     private String autenticar(Request request, Response response) {
         String username = request.queryParams("username");
         String senha = request.queryParams("senha");
 
-        // Exemplo simplificado de autenticação (substitua por lógica real)
-        if ("usuario".equals(username) && "senha123".equals(senha)) {
-            String token = JwtUtil.criarToken(username);
-            return token;
-        } else {
-            response.status(401); // Unauthorized
-            return "Credenciais inválidas";
+        // Consulta no banco de dados para autenticação
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "SELECT * FROM usuarios WHERE nome = ? AND senha = ?")) {
+
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, senha);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                String token = JwtUtil.criarToken(username);
+                return token;
+            } else {
+                response.status(401); // Unauthorized
+                return "Credenciais inválidas";
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.status(500); // Internal Server Error
+            return "Erro ao autenticar";
         }
+
     }
 }

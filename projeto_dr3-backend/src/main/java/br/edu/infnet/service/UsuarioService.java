@@ -4,7 +4,9 @@ import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.model.Usuario;
 import org.modelmapper.ModelMapper;
+import br.edu.infnet.config.DatabaseConfig;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,15 +17,35 @@ public class UsuarioService {
 
     public List<UsuarioDTOOutput> listar() {
         List<UsuarioDTOOutput> usuariosDTO = new ArrayList<>();
-        for (Usuario usuario : listaUsuarios) {
-            usuariosDTO.add(modelMapper.map(usuario, UsuarioDTOOutput.class));
+        try (Connection connection = DatabaseConfig.conectar();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM usuarios")) {
+
+            while (resultSet.next()) {
+                Usuario usuario = new Usuario();
+                usuario.setId(resultSet.getInt("id"));
+                usuario.setNome(resultSet.getString("nome"));
+
+                usuariosDTO.add(modelMapper.map(usuario, UsuarioDTOOutput.class));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return usuariosDTO;
     }
 
     public void inserir(UsuarioDTOInput usuarioDTOInput) {
-        Usuario usuario = modelMapper.map(usuarioDTOInput, Usuario.class);
-        listaUsuarios.add(usuario);
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
+
+            preparedStatement.setString(1, usuarioDTOInput.getNome());
+            preparedStatement.setString(2, usuarioDTOInput.getSenha());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void alterar(UsuarioDTOInput usuarioDTOInput) {
