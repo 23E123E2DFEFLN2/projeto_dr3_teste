@@ -1,7 +1,13 @@
 package br.edu.infnet.config;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.h2.tools.Server;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.*;
 
 public class DatabaseConfig {
@@ -20,17 +26,39 @@ public class DatabaseConfig {
                     "nome VARCHAR(255) NOT NULL," +
                     "senha VARCHAR(255) NOT NULL)");
 
+            // Inserir usuários da API randomuser.me
+            inserirUsuariosDaAPI(connection, 5); // Inserir 5 usuários, por exemplo
 
-            try (PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
-                preparedStatement.setString(1, "usuario");
-                preparedStatement.setString(2, "senha123");
-                preparedStatement.executeUpdate();
-                Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();
-            }
+            // Iniciar o console do H2
+            Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();
 
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void inserirUsuariosDaAPI(Connection connection, int quantidade) throws IOException, SQLException {
+        String apiUrl = "https://randomuser.me/api/?results=" + quantidade;
+        URL url = new URL(apiUrl);
+        HttpURLConnection connectionAPI = (HttpURLConnection) url.openConnection();
+
+        try (InputStream responseStream = connectionAPI.getInputStream()) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonResponse = objectMapper.readTree(responseStream);
+
+            if (jsonResponse.has("results")) {
+                for (JsonNode userNode : jsonResponse.get("results")) {
+                    String nome = userNode.get("name").get("first").asText();
+                    String senha = userNode.get("login").get("password").asText();
+
+                    try (PreparedStatement preparedStatement = connection.prepareStatement(
+                            "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
+                        preparedStatement.setString(1, nome);
+                        preparedStatement.setString(2, senha);
+                        preparedStatement.executeUpdate();
+                    }
+                }
+            }
         }
     }
 }
