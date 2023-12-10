@@ -27,7 +27,7 @@ public class ServiceTest {
         // Executar o método listar da classe UsuarioService
         List<UsuarioDTOOutput> listaUsuarios = usuarioService.listarUsuarios();
 
-        // Validar se o tamanho da lista é igual a 1
+
         assertEquals(1, listaUsuarios.size());
     }
 }

@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +89,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest (1)">
+  <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -117,6 +115,21 @@
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ExternalApiIntegrationTest" />
       <option name="METHOD_NAME" value="testInserirUsuarioViaApiExterna" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.IntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,22 +165,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projeto_dr3-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ServiceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServiceTest.testInserirUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
       <extension name="coverage">
@@ -195,19 +192,19 @@
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
+      <item itemvalue="JUnit.IntegrationTest" />
       <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
       <item itemvalue="JUnit.ServiceTest (1)" />
       <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
-      <item itemvalue="JUnit.ServiceTest" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
         <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
         <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
-        <item itemvalue="JUnit.ServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +224,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="26070000" />
+      <workItem from="1702183189475" duration="26874000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -325,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702237765481</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702240671423</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702240671423</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
