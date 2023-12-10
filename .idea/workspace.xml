@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/config/DatabaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +49,13 @@
     "JUnit.AT.executor": "Run",
     "JUnit.AppTest.executor": "Run",
     "JUnit.ExternalApiIntegrationTest.executor": "Run",
+    "JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna.executor": "Run",
     "JUnit.GreetingControllerTest.executor": "Run",
     "JUnit.IntegrationTest.executor": "Run",
+    "JUnit.IntegrationTest.testListarUsuarios.executor": "Run",
+    "JUnit.ServiceTest (1).executor": "Run",
     "JUnit.ServiceTest.executor": "Run",
+    "JUnit.ServiceTest.testInserirUsuario.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -72,7 +74,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reactor",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -81,7 +83,15 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ServiceTest (1)">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -95,7 +105,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ExternalApiIntegrationTest" />
+      <option name="METHOD_NAME" value="testInserirUsuarioViaApiExterna" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.testListarUsuarios" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.IntegrationTest" />
+      <option name="METHOD_NAME" value="testListarUsuarios" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
       <extension name="coverage">
         <pattern>
@@ -105,26 +147,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.edu.infnet" />
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ServiceTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mvnw" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/mvnw" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/sh" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
-      <method v="2" />
+    <configuration name="ServiceTest.testInserirUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ServiceTest" />
+      <option name="METHOD_NAME" value="testInserirUsuario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -136,14 +194,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
+      <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
+      <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
+      <item itemvalue="JUnit.ServiceTest (1)" />
+      <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
       <item itemvalue="JUnit.ServiceTest" />
-      <item itemvalue="Shell Script.mvnw" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServiceTest (1)" />
+        <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
+        <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
+        <item itemvalue="JUnit.ExternalApiIntegrationTest.testInserirUsuarioViaApiExterna" />
         <item itemvalue="JUnit.ServiceTest" />
-        <item itemvalue="Shell Script.mvnw" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="23067000" />
+      <workItem from="1702183189475" duration="26070000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -245,7 +309,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702234262717</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702237703284</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702237703284</updated>
+    </task>
+    <task id="LOCAL-00012" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702237765481</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702237765481</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,5 +353,9 @@
     <MESSAGE value="bd alimentado com api externa" />
     <MESSAGE value="validações" />
     <option name="LAST_COMMIT_MESSAGE" value="validações" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

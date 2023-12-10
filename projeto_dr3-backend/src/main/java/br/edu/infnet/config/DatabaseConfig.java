@@ -27,7 +27,7 @@ public class DatabaseConfig {
                     "senha VARCHAR(255) NOT NULL)");
 
             // Inserir usuários da API randomuser.me
-            inserirUsuariosDaAPI(connection); // Inserir 5 usuários, por exemplo
+            inserirUsuariosDaAPI(connection);
 
             // Iniciar o console do H2
             Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();

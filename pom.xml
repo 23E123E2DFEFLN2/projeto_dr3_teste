@@ -91,13 +91,29 @@
         <version>2.0.9</version> <!-- AT -->
       </dependency>
 
-
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.9.2</version> <!-- Use a versão mais recente -->
+        <scope>test</scope>
+      </dependency>
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>1.2.6</version> <!-- AT DR3 -->
       </dependency>
-
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.2</version> <!-- Use a versão mais recente -->
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.2</version> <!-- Use a versão mais recente -->
+        <scope>test</scope>
+      </dependency>
       
       <dependency>
                                 
