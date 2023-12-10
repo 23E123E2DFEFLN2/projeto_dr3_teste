@@ -114,7 +114,9 @@ if $mingw ; then
     M2_HOME="`(cd "$M2_HOME"; pwd)`"
   [ -n "$JAVA_HOME" ] &&
     JAVA_HOME="`(cd "$JAVA_HOME"; pwd)`"
-  # TODO classpath?
+  #  classpath? feito ok
+  CLASSPATH="$M2_HOME/lib/maven-model-builder-3.8.1.jar:$M2_HOME/lib/maven-artifact-3.8.1.jar:$M2_HOME/lib/maven-builder-support-3.8.1.jar"
+
 fi
 
 if [ -z "$JAVA_HOME" ]; then
