@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        
+  
+  <modelVersion>4.0.0</modelVersion>
+        
+  
+  <packaging>pom</packaging>
+        
+  
+  <parent>
+                
+    
+    <groupId>org.springframework.boot</groupId>
+                
+    
+    <artifactId>spring-boot-starter-parent</artifactId>
+                
+    
+    <version>2.2.0.M5</version>
+         
+    
+    <!-- lookup parent from repository -->
+            
+  
+  </parent>
+        
+  
+  <groupId>br.edu.infnet</groupId>
+        
+  
+  <artifactId>projeto_dr3</artifactId>
+        
+  
+  <version>1.0-SNAPSHOT</version>
+        
+  
+  <name>projeto_dr3</name>
+        
+  
+  <description>Blank multi project for Spring Boot + Elm</description>
+        
+  
+  <dependencyManagement>
+                
+    
+    <dependencies>
+                        
+      
+      <dependency>
+                                
+        
+        <groupId>br.edu.infnet</groupId>
+                                
+        
+        <artifactId>projeto_dr3-frontend</artifactId>
+                                
+        
+        <version>1.0-SNAPSHOT</version>
+                            
+      
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>2.2.0.M5</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.22</version> <!-- Adicionado AT -->
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.9</version> <!-- AT -->
+      </dependency>
+
+
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.6</version> <!-- AT DR3 -->
+      </dependency>
+
+      
+      <dependency>
+                                
+        
+        <groupId>br.edu.infnet</groupId>
+                                
+        
+        <artifactId>projeto_dr3-backend</artifactId>
+                                
+        
+        <version>1.0-SNAPSHOT</version>
+                            
+      
+      </dependency>
+                    
+    
+    </dependencies>
+            
+  
+  </dependencyManagement>
+        
+  
+  <repositories>
+                
+    
+    <repository>
+                        
+      
+      <id>spring-snapshots</id>
+                        
+      
+      <name>Spring Snapshots</name>
+                        
+      
+      <url>https://repo.spring.io/snapshot</url>
+                        
+      
+      <snapshots>
+            </snapshots>
+                    
+    
+    </repository>
+                
+    
+    <repository>
+                        
+      
+      <id>spring-milestones</id>
+                        
+      
+      <name>Spring Milestones</name>
+                        
+      
+      <url>https://repo.spring.io/milestone</url>
+                    
+    
+    </repository>
+            
+  
+  </repositories>
+        
+  
+  <pluginRepositories>
+                
+    
+    <pluginRepository>
+                        
+      
+      <id>spring-snapshots</id>
+                        
+      
+      <name>Spring Snapshots</name>
+                        
+      
+      <url>https://repo.spring.io/snapshot</url>
+                        
+      
+      <snapshots>
+            </snapshots>
+                    
+    
+    </pluginRepository>
+                
+    
+    <pluginRepository>
+                        
+      
+      <id>spring-milestones</id>
+                        
+      
+      <name>Spring Milestones</name>
+                        
+      
+      <url>https://repo.spring.io/milestone</url>
+                    
+    
+    </pluginRepository>
+            
+  
+  </pluginRepositories>
+    
+  
+  <modules>
+          
+    
+    <module>projeto_dr3-frontend</module>
+          
+    
+    <module>projeto_dr3-backend</module>
+      
+  </modules>
+  
+</project>

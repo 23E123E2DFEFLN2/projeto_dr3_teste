@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manifest.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/Greeting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/GreetingHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/WelcomeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/dto/UsuarioDTOOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application-default.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ExternalApiIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/GreetingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/IntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/elm.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_dr3-frontend/src/Main.elm" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2ZKYiUiSqWQKB1v1wLlDsFsznoK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainApp.executor": "Run",
+    "JUnit.AT.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.ExternalApiIntegrationTest.executor": "Run",
+    "JUnit.GreetingControllerTest.executor": "Run",
+    "JUnit.IntegrationTest.executor": "Run",
+    "JUnit.ServiceTest.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.App.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="projeto_dr3-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.infnet.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Spring Boot.App" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-jbr-17.0.9-3183f394aec4-35b47ae7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="" />
+      <created>1702172364976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702172364976</updated>
+      <workItem from="1702172366036" duration="10610000" />
+      <workItem from="1702183189475" duration="6191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
