@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="[INFO] Reactor Summary for projeto_dr3 1.0-SNAPSHOT:&#10;[INFO] &#10;[INFO] projeto_dr3 ........................................ SUCCESS [  0.366 s]&#10;[INFO] projeto_dr3-frontend ............................... SUCCESS [  1.509 s]&#10;[INFO] projeto_dr3-backend ................................ SUCCESS [  4.424 s]&#10;[INFO] ------------------------------------------------------------------------&#10;[INFO] BUILD SUCCESS&#10;[INFO] ------------------------------------------------------------------------">
+    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações :(">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -161,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="16030000" />
+      <workItem from="1702183189475" duration="16650000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -203,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702227647592</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="validações :(">
+      <option name="closed" value="true" />
+      <created>1702230164644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702230164644</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +232,7 @@
     <MESSAGE value="bd? !?" />
     <MESSAGE value="bd? !? bd? h2" />
     <MESSAGE value="[INFO] Reactor Summary for projeto_dr3 1.0-SNAPSHOT:&#10;[INFO] &#10;[INFO] projeto_dr3 ........................................ SUCCESS [  0.366 s]&#10;[INFO] projeto_dr3-frontend ............................... SUCCESS [  1.509 s]&#10;[INFO] projeto_dr3-backend ................................ SUCCESS [  4.424 s]&#10;[INFO] ------------------------------------------------------------------------&#10;[INFO] BUILD SUCCESS&#10;[INFO] ------------------------------------------------------------------------" />
-    <option name="LAST_COMMIT_MESSAGE" value="[INFO] Reactor Summary for projeto_dr3 1.0-SNAPSHOT:&#10;[INFO] &#10;[INFO] projeto_dr3 ........................................ SUCCESS [  0.366 s]&#10;[INFO] projeto_dr3-frontend ............................... SUCCESS [  1.509 s]&#10;[INFO] projeto_dr3-backend ................................ SUCCESS [  4.424 s]&#10;[INFO] ------------------------------------------------------------------------&#10;[INFO] BUILD SUCCESS&#10;[INFO] ------------------------------------------------------------------------" />
+    <MESSAGE value="validações :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="validações :(" />
   </component>
 </project>
