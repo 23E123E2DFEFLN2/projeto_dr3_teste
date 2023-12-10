@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/860e07f7-9b08-4df1-851f-e57439f18f51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/860e07f7-9b08-4df1-851f-e57439f18f51.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
     "JUnit.GreetingControllerTest.executor": "Run",
     "JUnit.IntegrationTest.executor": "Run",
     "JUnit.IntegrationTest.testListarUsuarios.executor": "Run",
-    "JUnit.ServiceTest (1).executor": "Debug",
+    "JUnit.ServiceTest (1).executor": "Run",
     "JUnit.ServiceTest.executor": "Run",
     "JUnit.ServiceTest.testInserirUsuario.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
@@ -90,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest (1)">
+  <component name="RunManager" selected="JUnit.IntegrationTest">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -190,9 +190,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
-        <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
         <item itemvalue="JUnit.IntegrationTest.testListarUsuarios" />
       </list>
@@ -214,7 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702172364976</updated>
       <workItem from="1702172366036" duration="10610000" />
-      <workItem from="1702183189475" duration="29616000" />
+      <workItem from="1702183189475" duration="31127000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -352,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702243276440</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702244179953</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702244179953</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
