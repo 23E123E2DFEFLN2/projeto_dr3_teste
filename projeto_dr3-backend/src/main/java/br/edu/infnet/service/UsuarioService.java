@@ -6,16 +6,18 @@ import br.edu.infnet.dto.UsuarioDTOOutput;
 import br.edu.infnet.model.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class UsuarioService {
 
     private ModelMapper modelMapper = new ModelMapper();
 
-    public List<UsuarioDTOOutput> listarUsuarios() {
+    public List<UsuarioDTOOutput> listar() {
         List<UsuarioDTOOutput> usuariosDTO = new ArrayList<>();
         try (Connection connection = DatabaseConfig.conectar();
              Statement statement = connection.createStatement();
@@ -30,39 +32,54 @@ public class UsuarioService {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
         return usuariosDTO;
     }
 
-    public void inserir(UsuarioDTOInput usuarioDTOInput) {
+    public void inserir(Usuario usuarioDTOInput) {
+        if (usuarioDTOInput == null || usuarioDTOInput.getNome() == null || usuarioDTOInput.getSenha() == null) {
+            throw new IllegalArgumentException("Usuário ou senha não podem ser nulos");
+        }
+
         try (Connection connection = DatabaseConfig.conectar();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "INSERT INTO usuarios (nome, senha) VALUES (?, ?)")) {
 
             preparedStatement.setString(1, usuarioDTOInput.getNome());
-            // Hash da senha antes de armazenar
             String senhaHash = BCrypt.hashpw(usuarioDTOInput.getSenha(), BCrypt.gensalt());
             preparedStatement.setString(2, senhaHash);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
+            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
     }
 
     public void alterar(UsuarioDTOInput usuarioDTOInput) {
-        Usuario usuario = modelMapper.map(usuarioDTOInput, Usuario.class);
-        List<UsuarioDTOOutput> usuarios = listarUsuarios();
-        for (int i = 0; i < usuarios.size(); i++) {
-            if (usuarios.get(i).getId() == usuario.getId()) {
-                atualizar(usuarioDTOInput);
-                break;
-            }
+        if (usuarioDTOInput == null || usuarioDTOInput.getId() == 0) {
+            throw new IllegalArgumentException("ID do usuário inválido");
+        }
+
+        try (Connection connection = DatabaseConfig.conectar();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "UPDATE usuarios SET nome = ?, senha = ? WHERE id = ?")) {
+
+            preparedStatement.setString(1, usuarioDTOInput.getNome());
+            String senhaHash = BCrypt.hashpw(usuarioDTOInput.getSenha(), BCrypt.gensalt());
+            preparedStatement.setString(2, senhaHash);
+            preparedStatement.setInt(3, usuarioDTOInput.getId());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
     }
 
     public UsuarioDTOOutput buscar(int id) {
-        List<UsuarioDTOOutput> usuarios = listarUsuarios();
+        List<UsuarioDTOOutput> usuarios = listar();
         for (UsuarioDTOOutput usuario : usuarios) {
             if (usuario.getId() == id) {
                 return modelMapper.map(usuario, UsuarioDTOOutput.class);
@@ -72,12 +89,15 @@ public class UsuarioService {
     }
 
     public void atualizar(UsuarioDTOInput usuarioDTOInput) {
+        if (usuarioDTOInput == null || usuarioDTOInput.getId() == 0) {
+            throw new IllegalArgumentException("ID do usuário inválido");
+        }
+
         try (Connection connection = DatabaseConfig.conectar();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "UPDATE usuarios SET nome = ?, senha = ? WHERE id = ?")) {
 
             preparedStatement.setString(1, usuarioDTOInput.getNome());
-            // Hash da nova senha antes de atualizar
             String senhaHash = BCrypt.hashpw(usuarioDTOInput.getSenha(), BCrypt.gensalt());
             preparedStatement.setString(2, senhaHash);
             preparedStatement.setInt(3, usuarioDTOInput.getId());
@@ -85,6 +105,7 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
     }
 
@@ -98,11 +119,11 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
     }
 
     public boolean usuariosEstaoVazios() {
-        List<UsuarioDTOOutput> usuarios = listarUsuarios();
-        return usuarios.isEmpty();
+        return listar().isEmpty();
     }
 }

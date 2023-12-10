@@ -3,13 +3,13 @@ package br.edu.infnet.controller;
 import br.edu.infnet.config.DatabaseConfig;
 import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.dto.UsuarioDTOOutput;
+import br.edu.infnet.model.Usuario;
 import br.edu.infnet.service.UsuarioService;
 import br.edu.infnet.util.JwtUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.mindrot.jbcrypt.BCrypt;
 import spark.Request;
 import spark.Response;
-
-import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -61,7 +61,7 @@ public class UsuarioController {
 
     private List<UsuarioDTOOutput> listarUsuarios(Request request, Response response) {
         response.type("application/json");
-        return usuarioService.listarUsuarios();
+        return usuarioService.listar();
     }
 
     private UsuarioDTOOutput buscarUsuario(Request request, Response response) {
@@ -77,16 +77,23 @@ public class UsuarioController {
     }
 
     private void inserirUsuario(Request request, Response response) throws Exception {
-        UsuarioDTOOutput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOOutput.class);
-        usuarioService.inserir(new UsuarioDTOInput());
+        UsuarioDTOInput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOInput.class);
+
+        // Convertendo de UsuarioDTOInput para Usuario
+        Usuario usuario = new Usuario();
+        usuario.setNome(usuarioDTOInput.getNome());
+        usuario.setSenha(usuarioDTOInput.getSenha());
+
+        usuarioService.inserir(usuario);
         response.status(201); // Created
     }
 
     private void atualizarUsuario(Request request, Response response) throws Exception {
-        UsuarioDTOOutput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOOutput.class);
-        usuarioService.alterar(new UsuarioDTOInput());
+        UsuarioDTOInput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOInput.class);
+        usuarioService.alterar(usuarioDTOInput);
         response.status(200); // OK
     }
+
     private void verificarToken(Request request, Response response) {
         String token = request.headers("Authorization");
 

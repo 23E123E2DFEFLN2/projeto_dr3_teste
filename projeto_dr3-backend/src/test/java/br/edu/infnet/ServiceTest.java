@@ -1,42 +1,40 @@
 package br.edu.infnet;
 
 import br.edu.infnet.dto.UsuarioDTOInput;
-import br.edu.infnet.dto.UsuarioDTOOutput;
+import br.edu.infnet.model.Usuario;
 import br.edu.infnet.service.UsuarioService;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+@SpringBootTest
+@ActiveProfiles("test")
 public class ServiceTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(ServiceTest.class);
+    @Autowired
+    private UsuarioService usuarioService;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Test
-    public void testInsercaoUsuario() {
-        // Criar uma instância da classe UsuarioService
-        UsuarioService usuarioService = new UsuarioService();
+    public void testInserirUsuario() {
 
-        // Criar um objeto UsuarioDTOInput para inserção
         UsuarioDTOInput usuarioDTOInput = new UsuarioDTOInput();
         usuarioDTOInput.setNome("NovoUsuario");
-        usuarioDTOInput.setSenha("SenhaNova");
+        usuarioDTOInput.setSenha("NovaSenha");
 
-        // Executar o método inserir da classe UsuarioService
-        usuarioService.inserir(usuarioDTOInput);
-
-        // Executar o método listar da classe UsuarioService
-        List<UsuarioDTOOutput> listaUsuarios = usuarioService.listarUsuarios();
-
-        logger.debug("Lista de usuários: {}", listaUsuarios);
-
-        assertEquals(1, listaUsuarios.size());
+        Usuario usuario = modelMapper.map(usuarioDTOInput, Usuario.class);
 
 
+        usuarioService.inserir(usuario);
+
+       int tamanhoListaAposInsercao = usuarioService.listar().size();
+
+
+        Assert.assertEquals(1, tamanhoListaAposInsercao);
     }
-
 }
-
