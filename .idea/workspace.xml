@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
+      <change afterPath="$PROJECT_DIR$/.idea/TestGeniePluginSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/860e07f7-9b08-4df1-851f-e57439f18f51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/860e07f7-9b08-4df1-851f-e57439f18f51.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +20,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,8 +35,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -65,6 +80,7 @@
     "Spring Boot.App.executor": "Run",
     "Spring Boot.MainApp.executor": "Run",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vinicius/IdeaProjects/projeto_dr3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,7 +94,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "h2"
+      "h2",
+      "mysql"
     ]
   }
 }]]></component>
@@ -90,7 +107,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest (1)">
+  <component name="RunManager" selected="Spring Boot.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -104,10 +121,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="H2 Fragment (DatabaseConfig.java:2,182).sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="/H2 Fragment (DatabaseConfig.java:2,182).sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
+    <configuration name="ExternalApiIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ExternalApiIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
@@ -179,7 +206,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
+      <item itemvalue="JUnit.ExternalApiIntegrationTest" />
       <item itemvalue="JUnit.IntegrationTest" />
       <item itemvalue="JUnit.ServiceTest (1)" />
       <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
@@ -188,11 +215,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceTest (1)" />
         <item itemvalue="Spring Boot.MainApp" />
+        <item itemvalue="JUnit.ServiceTest (1)" />
+        <item itemvalue="JUnit.ExternalApiIntegrationTest" />
         <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
         <item itemvalue="JUnit.IntegrationTest" />
-        <item itemvalue="Database Script.H2 Fragment (DatabaseConfig.java:2,182).sql" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +241,9 @@
       <workItem from="1702172366036" duration="10610000" />
       <workItem from="1702183189475" duration="31127000" />
       <workItem from="1702247257714" duration="1423000" />
-      <workItem from="1702248699513" duration="4687000" />
+      <workItem from="1702248699513" duration="5097000" />
+      <workItem from="1702256617455" duration="26000" />
+      <workItem from="1702259535839" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -368,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702252670448</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702256052077</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702256052077</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

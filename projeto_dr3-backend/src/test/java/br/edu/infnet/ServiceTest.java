@@ -1,40 +1,24 @@
 package br.edu.infnet;
 
-import br.edu.infnet.dto.UsuarioDTOInput;
 import br.edu.infnet.model.Usuario;
 import br.edu.infnet.service.UsuarioService;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
-@SpringBootTest
-@ActiveProfiles("test")
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class ServiceTest {
-
-    @Autowired
-    private UsuarioService usuarioService;
-
-    @Autowired
-    private ModelMapper modelMapper;
 
     @Test
     public void testInserirUsuario() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuarioDTOInput = new Usuario();
+        usuarioDTOInput.setId(1);
+        usuarioDTOInput.setNome("John Doe");
+        usuarioDTOInput.setSenha("password");
 
-        UsuarioDTOInput usuarioDTOInput = new UsuarioDTOInput();
-        usuarioDTOInput.setNome("NovoUsuario");
-        usuarioDTOInput.setSenha("NovaSenha");
+        usuarioService.inserir(usuarioDTOInput);
 
-        Usuario usuario = modelMapper.map(usuarioDTOInput, Usuario.class);
-
-
-        usuarioService.inserir(usuario);
-
-       int tamanhoListaAposInsercao = usuarioService.listar().size();
-
-
-        Assert.assertEquals(1, tamanhoListaAposInsercao);
+        // Verifica se o tamanho da lista é igual a 1 após a inserção
+        assertEquals(1, usuarioService.listar().size());
     }
 }

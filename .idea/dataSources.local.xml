@@ -16,5 +16,11 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="@localhost" uuid="c72b5ff6-b58a-4024-8118-8d3c8135ccc3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>infnet</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
