@@ -1,24 +1,28 @@
 package br.edu.infnet;
 
-import br.edu.infnet.model.Usuario;
-import br.edu.infnet.service.UsuarioService;
+import br.edu.infnet.dto.UsuarioDTOInput;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import br.edu.infnet.service.UsuarioService;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ServiceTest {
 
     @Test
-    public void testInserirUsuario() {
+    public void testInsercaoUsuario() {
+        // Criar uma instância de UsuarioService
         UsuarioService usuarioService = new UsuarioService();
-        Usuario usuarioDTOInput = new Usuario();
-        usuarioDTOInput.setId(1);
-        usuarioDTOInput.setNome("John Doe");
-        usuarioDTOInput.setSenha("password");
 
+        // Criar um objeto UsuarioDTOInput para inserção
+        UsuarioDTOInput usuarioDTOInput = new UsuarioDTOInput();
+        usuarioDTOInput.setNome("NovoUsuario");
+        usuarioDTOInput.setSenha("senha123");
+
+        // Executar o método inserir
         usuarioService.inserir(usuarioDTOInput);
 
-        // Verifica se o tamanho da lista é igual a 1 após a inserção
-        assertEquals(1, usuarioService.listar().size());
+        // Validar a inserção verificando o tamanho da lista retornada pelo método listar
+        int tamanhoLista = usuarioService.listar().size();
+        Assertions.assertEquals(1, tamanhoLista, "A inserção do usuário não foi bem-sucedida");
     }
 }

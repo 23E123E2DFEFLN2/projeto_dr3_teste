@@ -21,21 +21,21 @@ public class UsuarioService {
         List<UsuarioDTOOutput> usuariosDTO = new ArrayList<>();
         try (Connection connection = DatabaseConfig.conectar();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM USUARIOS")) {
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM usuarios")) {
 
             while (resultSet.next()) {
-                UsuarioDTOOutput usuarioDTO = new UsuarioDTOOutput();
-                usuarioDTO.setId(resultSet.getInt("id"));
-                usuarioDTO.setNome(resultSet.getString("nome"));
+                Usuario usuario = new Usuario();
+                usuario.setId(resultSet.getInt("id"));
+                usuario.setNome(resultSet.getString("nome"));
 
-                usuariosDTO.add(usuarioDTO);
+                usuariosDTO.add(modelMapper.map(usuario, UsuarioDTOOutput.class));
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
         }
         return usuariosDTO;
     }
+
 
     public void inserir(Usuario usuarioDTOInput) {
         if (usuarioDTOInput == null || usuarioDTOInput.getNome() == null || usuarioDTOInput.getSenha() == null) {

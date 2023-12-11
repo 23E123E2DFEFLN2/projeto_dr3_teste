@@ -1,20 +1,26 @@
-//Todo mysql
 package br.edu.infnet.config;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.h2.tools.Server;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DatabaseConfig {
 
+    private static final String URL = "jdbc:mysql://localhost:3306/pbback";
+    private static final String USUARIO = "infnet";
+    private static final String SENHA = "Pb@back";
+
     public static Connection conectar() throws SQLException {
-        return DriverManager.getConnection("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", "sa", "");
+        return DriverManager.getConnection(URL, USUARIO, SENHA);
     }
 
     public static void inicializarBancoDeDados() {
@@ -30,16 +36,13 @@ public class DatabaseConfig {
             // Inserir usuários da API randomuser.me
             inserirUsuariosDaAPI(connection);
 
-            // Iniciar o console do H2
-            Server.createWebServer("-web", "-webAllowOthers", "-webDaemon", "-webPort", "8082").start();
-
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
     }
 
     private static void inserirUsuariosDaAPI(Connection connection) throws IOException, SQLException {
-        String apiUrl = "https://randomuser.me/api/?results=" + 10;
+        String apiUrl = "https://randomuser.me/api/?results=" + 3;
         URL url = new URL(apiUrl);
         HttpURLConnection connectionAPI = (HttpURLConnection) url.openConnection();
 
