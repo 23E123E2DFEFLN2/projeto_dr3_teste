@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +107,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest">
+  <component name="RunManager" selected="JUnit.IntegrationTest">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -135,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExternalApiIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
       <extension name="coverage">
         <pattern>
@@ -144,22 +145,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.edu.infnet" />
-      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ExternalApiIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreetingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projeto_dr3-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.edu.infnet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.edu.infnet" />
-      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.GreetingControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.IntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,22 +190,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="projeto_dr3-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.infnet.MainApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="JUnit.AppTest" />
-      <item itemvalue="JUnit.GreetingControllerTest" />
       <item itemvalue="JUnit.ServiceTest" />
       <item itemvalue="JUnit.ServiceTest.testInsercaoUsuario" />
-      <item itemvalue="JUnit.ExternalApiIntegrationTest" />
+      <item itemvalue="JUnit.IntegrationTest" />
       <item itemvalue="Spring Boot.App" />
+      <item itemvalue="Spring Boot.MainApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest" />
         <item itemvalue="JUnit.ServiceTest" />
+        <item itemvalue="Spring Boot.MainApp" />
         <item itemvalue="JUnit.ServiceTest.testInsercaoUsuario" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.GreetingControllerTest" />
-        <item itemvalue="JUnit.ExternalApiIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +243,7 @@
       <workItem from="1702247257714" duration="1423000" />
       <workItem from="1702248699513" duration="5097000" />
       <workItem from="1702256617455" duration="26000" />
-      <workItem from="1702259535839" duration="13458000" />
+      <workItem from="1702259535839" duration="14104000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -445,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702332147261</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702332433056</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702332433056</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -126,4 +126,13 @@ public class UsuarioService {
     public boolean usuariosEstaoVazios() {
         return listar().isEmpty();
     }
+
+    public void limparBaseDeDados() {
+        try (Connection connection = DatabaseConfig.conectar();
+             Statement statement = connection.createStatement()) {
+            statement.execute("DELETE FROM usuarios");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

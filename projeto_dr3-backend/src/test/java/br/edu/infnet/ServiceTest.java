@@ -9,30 +9,21 @@ public class ServiceTest {
 
     @Test
     public void testInsercaoUsuario() {
-        // Criar uma instância de UsuarioService
         UsuarioService usuarioService = new UsuarioService();
 
-        // Criar um objeto UsuarioDTOInput para inserção
+
+        usuarioService.limparBaseDeDados();
+
         UsuarioDTOInput usuarioDTOInput = new UsuarioDTOInput();
         usuarioDTOInput.setNome("ServiceTestNovoUsuario");
         usuarioDTOInput.setSenha("senha123 (hash!) kkk!!");
 
-        // Obter a quantidade de usuários antes da inserção
-        int quantidadeAntes = usuarioService.listar().size();
-
-        // Executar o método inserir
         usuarioService.inserir(usuarioDTOInput);
 
-        // Obter a quantidade de usuários após a inserção
-        int quantidadeDepois = usuarioService.listar().size();
+        int tamanhoDepois = usuarioService.listar().size();
 
-        // Validar a inserção verificando a diferença na quantidade
-        int diferenca = quantidadeDepois - quantidadeAntes;
-        Assertions.assertEquals(1, diferenca, "A inserção do usuário não foi bem-sucedida");
+        Assertions.assertEquals(1, tamanhoDepois);
 
-        // Imprimir resultados
-        System.out.println("Quantidade de usuários antes: " + quantidadeAntes);
-        System.out.println("Quantidade de usuários depois: " + quantidadeDepois);
-        System.out.println("Diferença após a inserção: " + diferenca);
+        System.out.println(+ tamanhoDepois);
     }
 }
