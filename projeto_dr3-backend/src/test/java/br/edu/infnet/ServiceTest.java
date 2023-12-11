@@ -14,8 +14,8 @@ public class ServiceTest {
 
         // Criar um objeto UsuarioDTOInput para inserção
         UsuarioDTOInput usuarioDTOInput = new UsuarioDTOInput();
-        usuarioDTOInput.setNome("NovoUsuario");
-        usuarioDTOInput.setSenha("senha123");
+        usuarioDTOInput.setNome("ServiceTestNovoUsuario");
+        usuarioDTOInput.setSenha("senha123 (hash!) kkk!!");
 
         // Obter a quantidade de usuários antes da inserção
         int quantidadeAntes = usuarioService.listar().size();
