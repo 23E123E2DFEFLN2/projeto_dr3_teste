@@ -37,7 +37,7 @@ public class UsuarioService {
     }
 
 
-    public void inserir(Usuario usuarioDTOInput) {
+    public void inserir(UsuarioDTOInput usuarioDTOInput) {
         if (usuarioDTOInput == null || usuarioDTOInput.getNome() == null || usuarioDTOInput.getSenha() == null) {
             throw new IllegalArgumentException("Usuário ou senha não podem ser nulos");
         }

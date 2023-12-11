@@ -84,7 +84,7 @@ public class UsuarioController {
         usuario.setNome(usuarioDTOInput.getNome());
         usuario.setSenha(usuarioDTOInput.getSenha());
 
-        usuarioService.inserir(usuario);
+        usuarioService.inserir(usuarioDTOInput);
         response.status(201); // Created
     }
 
