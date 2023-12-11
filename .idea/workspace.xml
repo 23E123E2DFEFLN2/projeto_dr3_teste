@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="pom.xml atualizado corrigindo bugs em versoes&#10;banco mysql curl...">
+    <list default="true" id="63a9c2e3-6d82-41ce-8251-3173958174a5" name="Changes" comment="validações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/main/java/br/edu/infnet/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_dr3-backend/src/test/java/br/edu/infnet/ServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest (1)">
+  <component name="RunManager" selected="JUnit.ServiceTest.testInsercaoUsuario">
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.infnet.MainApp" />
       <module name="projeto_dr3-backend" />
@@ -118,6 +116,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,7 +150,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GreetingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projeto_dr3-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.GreetingControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projeto_dr3-backend" />
       <extension name="coverage">
         <pattern>
@@ -168,22 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest.testInserirUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projeto_dr3-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.edu.infnet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.edu.infnet" />
-      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.ServiceTest" />
-      <option name="METHOD_NAME" value="testInserirUsuario" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="projeto_dr3-backend" />
@@ -192,36 +204,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="projeto_dr3-backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.infnet.MainApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.edu.infnet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.GreetingControllerTest" />
+      <item itemvalue="JUnit.ServiceTest" />
       <item itemvalue="JUnit.ServiceTest.testInsercaoUsuario" />
       <item itemvalue="JUnit.ExternalApiIntegrationTest" />
-      <item itemvalue="JUnit.ServiceTest (1)" />
-      <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="Spring Boot.MainApp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceTest (1)" />
-        <item itemvalue="Spring Boot.MainApp" />
         <item itemvalue="JUnit.ServiceTest.testInsercaoUsuario" />
+        <item itemvalue="JUnit.ServiceTest" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.GreetingControllerTest" />
         <item itemvalue="JUnit.ExternalApiIntegrationTest" />
-        <item itemvalue="JUnit.ServiceTest.testInserirUsuario" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +243,7 @@
       <workItem from="1702247257714" duration="1423000" />
       <workItem from="1702248699513" duration="5097000" />
       <workItem from="1702256617455" duration="26000" />
-      <workItem from="1702259535839" duration="12525000" />
+      <workItem from="1702259535839" duration="13143000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -431,7 +429,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702330082350</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="validações">
+      <option name="closed" value="true" />
+      <created>1702331599935</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702331599935</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,10 +463,10 @@
     <MESSAGE value="validações :)" />
     <MESSAGE value="http://localhost:8082" />
     <MESSAGE value="bd alimentado com api externa" />
-    <MESSAGE value="validações" />
     <MESSAGE value="pom.xml atualizado corrigindo bugs em vercoes" />
     <MESSAGE value="pom.xml atualizado corrigindo bugs em versoes&#10;banco mysql curl..." />
-    <option name="LAST_COMMIT_MESSAGE" value="pom.xml atualizado corrigindo bugs em versoes&#10;banco mysql curl..." />
+    <MESSAGE value="validações" />
+    <option name="LAST_COMMIT_MESSAGE" value="validações" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

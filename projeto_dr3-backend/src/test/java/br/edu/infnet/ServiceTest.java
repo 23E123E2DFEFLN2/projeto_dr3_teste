@@ -17,11 +17,22 @@ public class ServiceTest {
         usuarioDTOInput.setNome("NovoUsuario");
         usuarioDTOInput.setSenha("senha123");
 
+        // Obter a quantidade de usuários antes da inserção
+        int quantidadeAntes = usuarioService.listar().size();
+
         // Executar o método inserir
         usuarioService.inserir(usuarioDTOInput);
 
-        // Validar a inserção verificando o tamanho da lista retornada pelo método listar
-        int tamanhoLista = usuarioService.listar().size();
-        Assertions.assertEquals(1, tamanhoLista, "A inserção do usuário não foi bem-sucedida");
+        // Obter a quantidade de usuários após a inserção
+        int quantidadeDepois = usuarioService.listar().size();
+
+        // Validar a inserção verificando a diferença na quantidade
+        int diferenca = quantidadeDepois - quantidadeAntes;
+        Assertions.assertEquals(1, diferenca, "A inserção do usuário não foi bem-sucedida");
+
+        // Imprimir resultados
+        System.out.println("Quantidade de usuários antes: " + quantidadeAntes);
+        System.out.println("Quantidade de usuários depois: " + quantidadeDepois);
+        System.out.println("Diferença após a inserção: " + diferenca);
     }
 }
