@@ -13,17 +13,17 @@ public class IntegrationTest {
 
     @Test
     public void testListarUsuarios() throws Exception {
-        // Substitua a URL abaixo pela URL real da sua aplicação
+
         URL url = new URL("http://localhost:4567/usuarios");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         connection.setRequestMethod("GET");
         int responseCode = connection.getResponseCode();
 
-        // Verifica se o código de resposta é 200 (OK)
+
         assertEquals(200, responseCode);
 
-        // Lê a resposta
+
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         StringBuilder response = new StringBuilder();
         String inputLine;
@@ -32,7 +32,7 @@ public class IntegrationTest {
         }
         in.close();
 
-        // Verifica se a resposta é uma lista não vazia
+
         assertEquals(false, response.toString().isEmpty());
     }
 }

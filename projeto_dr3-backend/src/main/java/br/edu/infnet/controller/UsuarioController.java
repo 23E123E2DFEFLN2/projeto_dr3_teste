@@ -25,37 +25,37 @@ public class UsuarioController {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     public void respostasRequisicoes() {
-        // Endpoint para listagem de usuários
+
         get("/usuarios", (request, response) -> {
             response.type("application/json");
             return objectMapper.writeValueAsString(listarUsuarios(request, response));
         });
 
-        // Endpoint para busca de um usuário por ID
+
         get("/usuarios/:id", (request, response) -> {
             response.type("application/json");
             return objectMapper.writeValueAsString(buscarUsuario(request, response));
         });
 
-        // Endpoint para exclusão de um usuário por ID
+
         delete("/usuarios/:id", (request, response) -> {
             excluirUsuario(request, response);
             return "";
         });
 
-        // Endpoint para inserção de um novo usuário
+
         post("/usuarios", (request, response) -> {
             inserirUsuario(request, response);
             return "";
         });
 
-        // Endpoint para atualização de um usuário
+
         put("/usuarios", (request, response) -> {
             atualizarUsuario(request, response);
             return "";
         });
 
-        // Endpoint para autenticação (exemplo simples)
+
         post("/login", this::autenticar);
     }
 
@@ -79,7 +79,7 @@ public class UsuarioController {
     private void inserirUsuario(Request request, Response response) throws Exception {
         UsuarioDTOInput usuarioDTOInput = objectMapper.readValue(request.body(), UsuarioDTOInput.class);
 
-        // Convertendo de UsuarioDTOInput para Usuario
+
         Usuario usuario = new Usuario();
         usuario.setNome(usuarioDTOInput.getNome());
         usuario.setSenha(usuarioDTOInput.getSenha());
@@ -101,7 +101,7 @@ public class UsuarioController {
             halt(401, "Token inválido ou ausente");
         }
 
-        // Verificar se o usuário associado ao token existe no banco de dados
+
         String username = JwtUtil.extrairUsername(token);
         try (Connection connection = DatabaseConfig.conectar();
              PreparedStatement preparedStatement = connection.prepareStatement(
@@ -123,7 +123,7 @@ public class UsuarioController {
         String username = request.queryParams("username");
         String senha = request.queryParams("senha");
 
-        // Consulta no banco de dados para autenticação
+
         try (Connection connection = DatabaseConfig.conectar();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "SELECT * FROM usuarios WHERE nome = ?")) {

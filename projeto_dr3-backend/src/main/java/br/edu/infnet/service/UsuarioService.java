@@ -53,7 +53,7 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
+
         }
     }
 
@@ -74,7 +74,7 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
+
         }
     }
 
@@ -105,7 +105,7 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
+
         }
     }
 
@@ -119,7 +119,7 @@ public class UsuarioService {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            // Trate a exceção de maneira adequada, lançando ou tratando de forma específica
+
         }
     }
 

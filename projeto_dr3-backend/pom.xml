@@ -52,24 +52,24 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
-            <version>0.11.5</version> <!-- Verifique a versão mais recente no site do jjwt -->
+            <version>0.11.5</version>
         </dependency>
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version> <!-- Verifique a versão mais recente no site do jjwt -->
+            <version>0.11.5</version>
         </dependency>
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.5</version> <!-- Verifique a versão mais recente no site do jjwt -->
+            <version>0.11.5</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.11.0</version> <!-- Verifique a versão mais recente no site do Commons IO -->
+            <version>2.11.0</version>
         </dependency>
 
         <dependency>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <!-- Use a versão adequada -->
+
         </dependency>
         <dependency>
             <groupId>io.projectreactor</groupId>
@@ -128,7 +128,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version> <!-- ou a versão mais recente -->
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
         <dependency>

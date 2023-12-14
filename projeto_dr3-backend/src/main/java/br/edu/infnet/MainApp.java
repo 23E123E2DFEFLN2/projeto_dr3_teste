@@ -8,7 +8,7 @@ import static spark.Spark.awaitInitialization;
 @SpringBootApplication
 public class MainApp {
     public static void main(String[] args) {
-        // Inicializa o banco de dados
+
         DatabaseConfig.inicializarBancoDeDados();
 
         UsuarioController usuarioController = new UsuarioController();

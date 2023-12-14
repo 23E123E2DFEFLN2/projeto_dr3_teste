@@ -27,13 +27,13 @@ public class DatabaseConfig {
         try (Connection connection = conectar();
              Statement statement = connection.createStatement()) {
 
-            // Criação da tabela de usuários
+
             statement.execute("CREATE TABLE IF NOT EXISTS usuarios (" +
                     "id INT PRIMARY KEY AUTO_INCREMENT," +
                     "nome VARCHAR(255) NOT NULL," +
                     "senha VARCHAR(255) NOT NULL)");
 
-            // Inserir usuários da API randomuser.me
+
             inserirUsuariosDaAPI(connection);
 
         } catch (SQLException | IOException e) {

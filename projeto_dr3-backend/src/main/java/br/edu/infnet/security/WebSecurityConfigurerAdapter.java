@@ -38,8 +38,7 @@ public class WebSecurityConfigurerAdapter extends org.springframework.security.c
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
-        // Implemente uma classe de serviço de usuário personalizada que consulta seus usuários no banco de dados
-        // Aqui está um exemplo simples usando UserDetails
+
         UserDetails user = User.builder()
                 .username("user")
                 .password(passwordEncoder().encode("password"))
